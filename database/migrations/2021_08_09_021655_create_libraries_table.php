@@ -18,7 +18,7 @@ class CreateLibrariesTable extends Migration
             $table->integer('authorId')->default(0);
             $table->string('title', 55);
             $table->string('ISBN',25);
-            $table->smallIncrements('pub_year')->default(0);
+            $table->smallInteger('pub_year')->default(0);
             $table->tinyInteger('available');
             $table->timestamps();
         });

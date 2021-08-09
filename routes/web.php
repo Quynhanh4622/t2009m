@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LibraryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//Route::get('/library/create',[LibraryController::class, 'create']);
+//Route::post('/library/create',[LibraryController::class, 'store']);
+Route::post('/search',[LibraryController::class,'search']);
+Route::get('/library/list',[LibraryController::class, 'list']);
+Route::get('/library/edit/{id}',[LibraryController::class, 'edit']);
+Route::post('/library/update/{id}',[LibraryController::class, 'update']);
+Route::get('/library/delete/{id}',[LibraryController::class, 'delete']);
